@@ -1,3 +1,33 @@
+.right-section {
+    width: 80%;
+}
+
 form {
     display: grid;
+}
+
+.table {
+    margin-top: 2rem;
+}
+
+#stockTable {
+    width: 100%;
+}
+
+#stockTable th {
+    padding: 10px;
+}
+
+#stockTable td {
+    padding: 10px;
+}
+
+.searchBox {
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    justify-content: end;
+}
+
+#search { 
+    margin-right: 10px;
 }
