@@ -21,7 +21,7 @@
                 <div class="logo">SOFT ERP</div>
                 <ul style="padding: 0;">
                     <li><a href="/" class="nav-item">Dashboard</a></li>
-                    <li><a href="#" class="nav-item">Management</a></li>
+                    <li><a href="./management.html" class="nav-item">Management</a></li>
                     <li><a href="#" class="nav-item">Billing</a></li>
                     <li><a href="#" class="nav-item">Repords</a></li>
                 </ul>
@@ -64,6 +64,7 @@
                         <th>Quantity</th>
                         <th>Price</th>
                         <th>Supplier</th>
+                        <th>Actions</th>
                     </tr>
                 </table>
             </div>
@@ -92,7 +93,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="ClearForm()">Close</button>
                             <button type="button" class="btn btn-primary" onclick="saveStock(event)">Save</button>
                         </div>
                     </div>

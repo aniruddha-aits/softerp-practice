@@ -1,4 +1,4 @@
-let stocks = [];
+let stocks = {};
 
 function saveStock(event) {
     event.preventDefault();
@@ -8,7 +8,15 @@ function saveStock(event) {
     let price = document.getElementById('price').value;
     let supplier = document.getElementById('supplier').value;
 
-    stocks = [stockName, quantity, price, supplier];
+    let id = Math.random()
+
+    stocks[id]  = {
+        "stock": stockName,
+        "quantity": quantity,
+        "price": price,
+        "supplier": supplier
+    };
+
 
     let Table = document.getElementById("stockTable");
 
@@ -18,10 +26,14 @@ function saveStock(event) {
             <td>${quantity}</td>
             <td>${price}</td>
             <td>${supplier}</td>
+            <td>
+                <button>Edit</button>
+                <button>Delete</button>
+            </td>
         </tr>
     `;
 
-    console.log(stocks);
+    console.log(stocks.stock);
 }
 
 function ClearForm() {
@@ -41,11 +53,14 @@ function searchStock(event) {
     let isFound = false;
     let nameSearch = document.getElementById("search").value;
 
-    for (let i=0; i<length; i++) {
-        if (stocks[i] == nameSearch) {
+
+    for (let key in stocks) {
+
+        if (stocks[key].stock == nameSearch) {
             console.log("Stock Found");
             isFound = true;
         }
+
     }
 
     if (isFound == false) {
